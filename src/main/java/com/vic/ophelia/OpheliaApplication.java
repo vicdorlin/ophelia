@@ -6,6 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 /**
  * 启动类
  */
+//@ComponentScan(basePackages = { "com.vic.ophelia" })
 @SpringBootApplication
 public class OpheliaApplication {//implements EmbeddedServletContainerCustomizer {
 
