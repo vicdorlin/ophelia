@@ -1,0 +1,17 @@
+# properties文件的替代spring:spring:
+spring:
+  profiles:
+    active: product
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/itao?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: update
+      # create每次运行会自动创建表（如果有了 会先删后建）
+      # create-drop 应用停下来的时候会把表删了
+      # validate 验证类的属性和表结构是否一致，如不一致会报错
+    show-sql: true #可以在控制台看到sql语句 方便调试
+

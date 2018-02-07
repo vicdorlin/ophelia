@@ -1,0 +1,10 @@
+# properties文件的替代
+server:
+  port: 8999
+  context-path: /ophelia
+fullName: OpheliaZhao
+fromHeart: "my love ${fullName}"
+ophelia:
+  firstName: Zhao
+  sex: girl
+  age: 17
