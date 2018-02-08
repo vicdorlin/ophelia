@@ -8,6 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  */
 //@ComponentScan(basePackages = { "com.vic.ophelia" })
 @SpringBootApplication
+//@MapperScan("com.vic.ophelia.mapper")//添加mybatis包扫描（也可以在mapper类上添加@Mapper）
 public class OpheliaApplication {//implements EmbeddedServletContainerCustomizer {
 
     public static void main(String[] args) {

@@ -7,6 +7,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
+import org.springframework.test.web.servlet.result.MockMvcResultHandlers;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
 import javax.annotation.Resource;
@@ -27,5 +28,11 @@ public class CatControllerTest {
         mockMvc.perform(MockMvcRequestBuilders.get("/cat/cats"))
                 //.andExpect(MockMvcResultMatchers.content().string("abc"))
                 .andExpect(MockMvcResultMatchers.status().isOk());
+    }
+
+    @Test
+    public void cats2() throws Exception {
+        mockMvc.perform(MockMvcRequestBuilders.get("/cat/cats2"))
+                .andDo(MockMvcResultHandlers.print());
     }
 }

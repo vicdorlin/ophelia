@@ -1,4 +1,4 @@
-# properties文件的替代spring:spring:
+# properties文件的替代
 spring:
   profiles:
     active: product

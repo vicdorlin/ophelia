@@ -27,13 +27,23 @@ public class CatController {
     private CatService catService;
 
     /**
-     * 列表
+     * 列表 hibernate方式
      *
      * @return
      */
     @GetMapping("cats")
     public List<Cat> cats() {
         return catRepository.findAll();
+    }
+
+    /**
+     * 列表 mybatis方式
+     *
+     * @return
+     */
+    @GetMapping("cats2")
+    public List<Cat> cats2() {
+        return catService.cats();
     }
 
     /*@PostMapping("cats")

@@ -2,11 +2,13 @@ package com.vic.ophelia.service;
 
 import com.vic.ophelia.domain.Cat;
 import com.vic.ophelia.exception.GlobalException;
+import com.vic.ophelia.mapper.CatMapper;
 import com.vic.ophelia.repo.CatRepository;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import javax.transaction.Transactional;
+import java.util.List;
 
 import static com.vic.ophelia.enums.EGlobalCode.GLOBAL_LITTLE_TIP;
 
@@ -17,8 +19,18 @@ import static com.vic.ophelia.enums.EGlobalCode.GLOBAL_LITTLE_TIP;
 @Service
 public class CatService {
 
+    /**
+     * spring-boot-jpa
+     * hibernate方式
+     */
     @Resource
     private CatRepository catRepository;
+    /**
+     * mybatis-spring-boot-starter
+     * mybatis方式
+     */
+    @Resource
+    private CatMapper catMapper;
 
     @Transactional
     public void insertTwo() {
@@ -42,5 +54,9 @@ public class CatService {
 
     public Cat findOne(Integer id) {
         return catRepository.findOne(id);
+    }
+
+    public List<Cat> cats() {
+        return catMapper.getCats();
     }
 }
