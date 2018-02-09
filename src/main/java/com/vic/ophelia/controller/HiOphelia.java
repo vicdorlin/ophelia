@@ -2,11 +2,12 @@ package com.vic.ophelia.controller;
 
 import com.vic.ophelia.prop.HerProperties;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
+import java.util.Map;
 
 /**
  * hi my dear
@@ -32,10 +33,11 @@ public class HiOphelia {
         return herProperties.getFirstName() + " is a " + herProperties.getSex() + " with age of " + herProperties.getAge();
     }
 
-//    @RequestMapping(value = {"oph", "elia"}, method = RequestMethod.POST)
-//    @GetMapping(value = {"oph", "elia"})
-    @PostMapping(value = {"oph", "elia"})
-    public String sayHello() {
+    //    @RequestMapping(value = {"oph", "elia"}, method = RequestMethod.POST)
+    @GetMapping(value = {"oph", "elia"})
+//    @PostMapping(value = {"oph", "elia"})
+    public String sayHello(Map<String,String> request) {
+        request.put("name", "ophelia");
         return "index";
     }
 }

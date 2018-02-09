@@ -7,6 +7,7 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.stereotype.Component;
 
 /**
+ * 对应于 properties或者yml文件属性
  * 欧菲利亚的属性
  *
  * @author vicdor
