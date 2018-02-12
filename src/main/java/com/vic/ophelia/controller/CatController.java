@@ -1,10 +1,12 @@
 package com.vic.ophelia.controller;
 
+import com.vic.ophelia.aspect.AdminOnly;
 import com.vic.ophelia.domain.Cat;
 import com.vic.ophelia.domain.ResultVo;
 import com.vic.ophelia.repo.CatRepository;
 import com.vic.ophelia.service.CatService;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
@@ -32,7 +34,9 @@ public class CatController {
      * @return
      */
     @GetMapping("cats")
+    @Cacheable(cacheNames = {"cats"})
     public List<Cat> cats() {
+        System.out.println("=== haha 我被执行了 === ");
         return catRepository.findAll();
     }
 
@@ -61,6 +65,7 @@ public class CatController {
      * @param cat
      * @return
      */
+    @AdminOnly
     @PostMapping("cats")
     public ResultVo addCat(@Valid Cat cat, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {

@@ -23,4 +23,9 @@ public class GlobalException extends RuntimeException {
     public GlobalException(EGlobalCode globalCode) {
         this(globalCode.getCode(), globalCode.getMsg());
     }
+
+    public GlobalException(String message) {
+        super(message);
+        this.code = -1991;
+    }
 }

@@ -86,6 +86,17 @@
             <optional>true</optional><!--用以支持热部署-->
         </dependency>
 
+        <!--缓存  使用 @Cacheable-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-cache</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>commons-beanutils</groupId>
+            <artifactId>commons-beanutils</artifactId>
+        </dependency>
+
     </dependencies>
 
     <build>
