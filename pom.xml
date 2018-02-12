@@ -6,7 +6,7 @@
     <groupId>com.vic</groupId>
     <artifactId>ophelia</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>jar</packaging><!--改成war以支持mvn启动 实现热加载-->
+    <packaging>jar</packaging>
 
     <name>ophelia</name>
     <description>Demo project for Spring Boot</description>
