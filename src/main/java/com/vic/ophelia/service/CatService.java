@@ -52,6 +52,10 @@ public class CatService {
         return catRepository.save(cat);
     }
 
+    public List<Cat> findByName(String name){
+        return catRepository.findByName(name);
+    }
+
     public Cat findOne(Integer id) {
         return catRepository.findOne(id);
     }

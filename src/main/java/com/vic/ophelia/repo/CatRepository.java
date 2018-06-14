@@ -20,5 +20,5 @@ public interface CatRepository extends JpaRepository<Cat, Integer> {
      */
     List<Cat> findByAge(Integer age);
 
-
+    List<Cat> findByName(String name);
 }
