@@ -57,7 +57,7 @@ public class CatService {
     }
 
     public Cat findOne(Integer id) {
-        return catRepository.findOne(id);
+        return catRepository.getOne(id);
     }
 
     public List<Cat> cats() {

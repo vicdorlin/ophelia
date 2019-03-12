@@ -108,7 +108,7 @@ public class CatController {
      */
     @DeleteMapping("cat/{id}")
     public void deleteById(@PathVariable("id") Integer id) {
-        catRepository.delete(id);
+        catRepository.deleteById(id);
     }
 
     /**

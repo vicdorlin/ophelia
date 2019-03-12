@@ -1,7 +1,8 @@
 # properties文件的替代
 server:
   port: 9999
-  context-path: /ophelia
+  servlet:
+    context-path: /oph
 fullName: OpheliaZhao
 fromHeart: "my love ${fullName}"
 ophelia:
